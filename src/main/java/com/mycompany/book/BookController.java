@@ -32,7 +32,7 @@ public class BookController {
     @PostMapping("/books/save")
     public String saveUser(Book book, RedirectAttributes ra){
         service.save(book);
-        ra.addFlashAttribute("message", "The user has been saved successfully!");
+        ra.addFlashAttribute("message", "The book has been saved successfully!");
         return "redirect:/books";
     }
 
