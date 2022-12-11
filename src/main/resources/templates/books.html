@@ -14,7 +14,9 @@
   <div class="m-2">
     <a class="h3" th:href="@{/books/new}">Add New Book</a>
   </div>
-
+  <div th:if="${message}" class="alert alert-success text-center">
+    [[${message}]]
+  </div>
 
   <div>
     <table class="table table-bordered">
@@ -24,6 +26,7 @@
         <th>Author</th>
         <th>Title</th>
         <th>Genre</th>
+        <th>Enabled</th>
       </tr>
       </thead>
       <tbody>
@@ -33,6 +36,7 @@
           <td>[[${book.author}]]</td>
           <td>[[${book.title}]]</td>
           <td>[[${book.genre}]]</td>
+          <td>[[${book.enabled}]]</td>
           <td>
             <a class="h4 mr-3" th:href="@{'/books/edit/' + ${book.id}}">Edit</a>
             <a class="h4" th:href="@{'/books/delete/' + ${book.id}}">Delete</a>
