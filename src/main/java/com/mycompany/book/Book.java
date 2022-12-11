@@ -18,7 +18,7 @@ public class Book {
     @Column (nullable = false, length = 45)
     private String genre;
 
-
+    private boolean enabled;
     public Integer getId() {
         return id;
     }
@@ -59,5 +59,13 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", genre='" + genre + '\'' +
                 '}';
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }
