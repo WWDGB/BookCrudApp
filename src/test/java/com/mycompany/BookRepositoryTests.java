@@ -65,7 +65,7 @@ public class BookRepositoryTests {
 
     @Test
     public void testDelete(){
-        Integer bookId = 3;
+        Integer bookId = 2;
         repo.deleteById(bookId);
 
         Optional<Book> optionalBook = repo.findById(bookId);
