@@ -30,13 +30,12 @@
       </tr>
       </thead>
       <tbody>
-      <th:block th:each="book : ${listBooks}">
+      <th:block th:each="book : ${bookList}">
         <tr>
           <td>[[${book.id}]]</td>
           <td>[[${book.author}]]</td>
           <td>[[${book.title}]]</td>
           <td>[[${book.genre}]]</td>
-          <td>[[${book.enabled}]]</td>
           <td>
             <a class="h4 mr-3" th:href="@{'/books/edit/' + ${book.id}}">Edit</a>
             <a class="h4" th:href="@{'/books/delete/' + ${book.id}}">Delete</a>
